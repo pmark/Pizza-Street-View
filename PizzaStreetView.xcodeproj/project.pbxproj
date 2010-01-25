@@ -59,6 +59,9 @@
 		4DD416F3110D6E9D00400C39 /* AsyncArtworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */; };
 		4DD416F4110D6E9D00400C39 /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F0110D6E9D00400C39 /* LocalSearch.m */; };
 		4DD416F5110D6E9D00400C39 /* UIApplication_TLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */; };
+		4DD4195C110DB32800400C39 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD4195B110DB32800400C39 /* AudioToolbox.framework */; };
+		4DD41975110DB3A800400C39 /* focus3.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4DD41974110DB3A800400C39 /* focus3.aif */; };
+		4DD41977110DB3AF00400C39 /* focus2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4DD41976110DB3AF00400C39 /* focus2.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +132,9 @@
 		4DD416F0110D6E9D00400C39 /* LocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSearch.m; sourceTree = "<group>"; };
 		4DD416F1110D6E9D00400C39 /* UIApplication_TLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplication_TLCommon.h; sourceTree = "<group>"; };
 		4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_TLCommon.m; sourceTree = "<group>"; };
+		4DD4195B110DB32800400C39 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4DD41974110DB3A800400C39 /* focus3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = focus3.aif; sourceTree = "<group>"; };
+		4DD41976110DB3AF00400C39 /* focus2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = focus2.aif; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PizzaStreetView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PizzaStreetView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +151,7 @@
 				4D5C94E8110D33C300B19D9D /* OpenGLES.framework in Frameworks */,
 				4D5C94EA110D33C300B19D9D /* QuartzCore.framework in Frameworks */,
 				4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */,
+				4DD4195C110DB32800400C39 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DD4195B110DB32800400C39 /* AudioToolbox.framework */,
 				4D5C94E3110D33C300B19D9D /* CoreLocation.framework */,
 				4D5C94E5110D33C300B19D9D /* MapKit.framework */,
 				4D5C94E7110D33C300B19D9D /* OpenGLES.framework */,
@@ -271,6 +279,8 @@
 				4D5C956E110D371600B19D9D /* bubble1.png */,
 				4D5C956F110D371600B19D9D /* compass_rose.png */,
 				4D5C9570110D371600B19D9D /* focus1.aif */,
+				4DD41976110DB3AF00400C39 /* focus2.aif */,
+				4DD41974110DB3A800400C39 /* focus3.aif */,
 				4D5C9571110D371600B19D9D /* SM3DAR.h */,
 				4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */,
 			);
@@ -371,6 +381,8 @@
 				4D5C958B110D371600B19D9D /* compass_rose.png in Resources */,
 				4D5C958C110D371600B19D9D /* focus1.aif in Resources */,
 				4D5C958D110D371600B19D9D /* spot_metrix_logo.jpg in Resources */,
+				4DD41975110DB3A800400C39 /* focus3.aif in Resources */,
+				4DD41977110DB3AF00400C39 /* focus2.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

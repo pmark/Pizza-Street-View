@@ -20,6 +20,7 @@
 #pragma mark -
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self initSound];
   
   SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedSM3DAR_Controller];
   sm3dar.delegate = self;
@@ -50,6 +51,7 @@
 
 
 - (void) didChangeFocusToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
+	[self playFocusSound];
 }
 
 - (void) phoneAction {
@@ -124,22 +126,33 @@
   }
 }
 
+#pragma mark Sound
+- (void) initSound {
+	CFBundleRef mainBundle = CFBundleGetMainBundle();
+	CFURLRef soundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR ("focus2"), CFSTR ("aif"), NULL) ;
+	AudioServicesCreateSystemSoundID(soundFileURLRef, &focusSound);
+}
+
+- (void) playFocusSound {
+	AudioServicesPlaySystemSound(focusSound);
+} 
+
  
 #pragma mark -
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
   [super didReceiveMemoryWarning];
 	
 	// Release any cached data, images, etc that aren't in use.
 }
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
 
-- (void)dealloc {
+- (void) dealloc {
   [search release];
   [selectedPOI release];
   [super dealloc];
