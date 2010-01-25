@@ -27,9 +27,6 @@
 		4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C953E110D346800B19D9D /* SM3DARLibary.a */; };
 		4D5C9545110D347F00B19D9D /* AnimatedSphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */; };
 		4D5C9546110D347F00B19D9D /* SphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9544110D347F00B19D9D /* SphereView.mm */; };
-		4D5C954D110D349800B19D9D /* AsyncArtworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */; };
-		4D5C954E110D349800B19D9D /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C954A110D349800B19D9D /* LocalSearch.m */; };
-		4D5C954F110D349800B19D9D /* UIApplication_TLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */; };
 		4D5C9553110D370900B19D9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9551110D370900B19D9D /* Default.png */; };
 		4D5C9554110D370900B19D9D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9552110D370900B19D9D /* Icon.png */; };
 		4D5C9573110D371600B19D9D /* street1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9557110D371600B19D9D /* street1024.jpg */; };
@@ -59,6 +56,9 @@
 		4D5C958B110D371600B19D9D /* compass_rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956F110D371600B19D9D /* compass_rose.png */; };
 		4D5C958C110D371600B19D9D /* focus1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9570110D371600B19D9D /* focus1.aif */; };
 		4D5C958D110D371600B19D9D /* spot_metrix_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */; };
+		4DD416F3110D6E9D00400C39 /* AsyncArtworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */; };
+		4DD416F4110D6E9D00400C39 /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F0110D6E9D00400C39 /* LocalSearch.m */; };
+		4DD416F5110D6E9D00400C39 /* UIApplication_TLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,12 +93,6 @@
 		4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimatedSphereView.mm; sourceTree = "<group>"; };
 		4D5C9543110D347F00B19D9D /* SphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereView.h; sourceTree = "<group>"; };
 		4D5C9544110D347F00B19D9D /* SphereView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SphereView.mm; sourceTree = "<group>"; };
-		4D5C9547110D349800B19D9D /* AsyncArtworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncArtworkFetcher.h; path = ../Sphere/AsyncArtworkFetcher.h; sourceTree = SOURCE_ROOT; };
-		4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncArtworkFetcher.m; path = ../Sphere/AsyncArtworkFetcher.m; sourceTree = SOURCE_ROOT; };
-		4D5C9549110D349800B19D9D /* LocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalSearch.h; path = ../Sphere/LocalSearch.h; sourceTree = SOURCE_ROOT; };
-		4D5C954A110D349800B19D9D /* LocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalSearch.m; path = ../Sphere/LocalSearch.m; sourceTree = SOURCE_ROOT; };
-		4D5C954B110D349800B19D9D /* UIApplication_TLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIApplication_TLCommon.h; path = ../Sphere/UIApplication_TLCommon.h; sourceTree = SOURCE_ROOT; };
-		4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIApplication_TLCommon.m; path = ../Sphere/UIApplication_TLCommon.m; sourceTree = SOURCE_ROOT; };
 		4D5C9551110D370900B19D9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4D5C9552110D370900B19D9D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4D5C9557110D371600B19D9D /* street1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = street1024.jpg; sourceTree = "<group>"; };
@@ -129,6 +123,12 @@
 		4D5C9570110D371600B19D9D /* focus1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = focus1.aif; sourceTree = "<group>"; };
 		4D5C9571110D371600B19D9D /* SM3DAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM3DAR.h; sourceTree = "<group>"; };
 		4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spot_metrix_logo.jpg; sourceTree = "<group>"; };
+		4DD416ED110D6E9D00400C39 /* AsyncArtworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncArtworkFetcher.h; sourceTree = "<group>"; };
+		4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncArtworkFetcher.m; sourceTree = "<group>"; };
+		4DD416EF110D6E9D00400C39 /* LocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalSearch.h; sourceTree = "<group>"; };
+		4DD416F0110D6E9D00400C39 /* LocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSearch.m; sourceTree = "<group>"; };
+		4DD416F1110D6E9D00400C39 /* UIApplication_TLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplication_TLCommon.h; sourceTree = "<group>"; };
+		4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_TLCommon.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PizzaStreetView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PizzaStreetView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,13 +188,13 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4DD416ED110D6E9D00400C39 /* AsyncArtworkFetcher.h */,
+				4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */,
+				4DD416EF110D6E9D00400C39 /* LocalSearch.h */,
+				4DD416F0110D6E9D00400C39 /* LocalSearch.m */,
+				4DD416F1110D6E9D00400C39 /* UIApplication_TLCommon.h */,
+				4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */,
 				4D5C952C110D343800B19D9D /* BSJSONAdditions */,
-				4D5C9547110D349800B19D9D /* AsyncArtworkFetcher.h */,
-				4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */,
-				4D5C9549110D349800B19D9D /* LocalSearch.h */,
-				4D5C954A110D349800B19D9D /* LocalSearch.m */,
-				4D5C954B110D349800B19D9D /* UIApplication_TLCommon.h */,
-				4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */,
 				32CA4F630368D1EE00C91783 /* PizzaStreetView_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -391,9 +391,9 @@
 				4D5C953B110D343800B19D9D /* NSString+BSJSONAdditions.m in Sources */,
 				4D5C9545110D347F00B19D9D /* AnimatedSphereView.mm in Sources */,
 				4D5C9546110D347F00B19D9D /* SphereView.mm in Sources */,
-				4D5C954D110D349800B19D9D /* AsyncArtworkFetcher.m in Sources */,
-				4D5C954E110D349800B19D9D /* LocalSearch.m in Sources */,
-				4D5C954F110D349800B19D9D /* UIApplication_TLCommon.m in Sources */,
+				4DD416F3110D6E9D00400C39 /* AsyncArtworkFetcher.m in Sources */,
+				4DD416F4110D6E9D00400C39 /* LocalSearch.m in Sources */,
+				4DD416F5110D6E9D00400C39 /* UIApplication_TLCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
