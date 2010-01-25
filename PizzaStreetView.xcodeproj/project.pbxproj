@@ -452,13 +452,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = PizzaStreet;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEE0AFC7-1F9E-4E1C-B451-1F6A119CDB59";
 				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
@@ -467,13 +465,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = PizzaStreet;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEE0AFC7-1F9E-4E1C-B451-1F6A119CDB59";
 				SDKROOT = iphoneos3.1;
 			};
 			name = Release;

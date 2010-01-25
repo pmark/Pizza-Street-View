@@ -65,6 +65,7 @@
   {
     NSString* path = [[NSBundle mainBundle] pathForResource:@"sphere" ofType:@"obj"];
     self.geometry = [[Geometry newOBJFromResource:path] autorelease];
+    self.geometry.cullFace = NO;
   }
   
   if (self.texture == nil)
@@ -83,14 +84,22 @@
 }
 
 - (void) drawInGLContext {
-  glRotatef (-90, 1, 0, 0);
-  glRotatef (90, 0, 1, 0);
-  glScalef (100, 100, 100);
   
-  [self updateTexture];
+  glScalef (200, 200, 200);
+  glRotatef (180, 1, 0, 0);
+
+// Use this rotation to correct the sphere.obj
+//  glRotatef (-90, 1, 0, 0);
+//  glRotatef (90, 0, 1, 0);  
+//  [self updateTexture];
 
   glDepthMask(0);
-  [self.geometry displayFilledWithTexture:self.texture];
+  if (textureImage == nil)
+    [self.geometry displayWireframe];
+//  [self.geometry displayFilledWithTexture:self.texture];
+  else
+    [Geometry displaySphereWithTexture:self.texture];
+
   glDepthMask(1);
 }
 
@@ -110,7 +119,7 @@
   img = [self resizeImage:img];
   //NSLog(@"[SV] DONE: %f, %f", img.size.width, img.size.height);
   self.textureImage = img;
-  [self.texture replaceTextureWithImage:img.CGImage];
+  [self updateTexture];
 }
 
 - (UIImage*) resizeImage:(UIImage*)originalImage {

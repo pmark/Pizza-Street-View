@@ -42,6 +42,7 @@
   NSURL *url = [NSURL URLWithString:urlString];
   
   SphereView *sv = [[[SphereView alloc] initWithTextureURL:url] autorelease];
+//  SphereView *sv = [[[SphereView alloc] initWithTextureNamed:@"texture.png"] autorelease];
   fixture.view = sv;
   
   [sm3dar addPointOfInterest:fixture];

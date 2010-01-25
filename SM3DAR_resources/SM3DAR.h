@@ -205,8 +205,10 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 @interface Geometry : NSObject
 {
 }
+@property (nonatomic) BOOL cullFace;
 + (Geometry *) newOBJFromResource:(NSString *)resource;
 - (void) displayWireframe;
 - (void) displayFilledWithTexture:(Texture *)texture;
 - (void) displayShaded;
++ (void) displaySphereWithTexture:(Texture *)texture;
 @end
