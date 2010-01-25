@@ -10,11 +10,13 @@
 #import "SM3DAR.h"
 #import "LocalSearch.h"
 
-@interface PizzaStreetViewViewController : UIViewController <SM3DAR_Delegate> {
+@interface PizzaStreetViewViewController : UIViewController <SM3DAR_Delegate, UIActionSheetDelegate> {
   LocalSearch *search;
+  SM3DAR_PointOfInterest *selectedPOI;
 }
 
 @property (nonatomic, retain) LocalSearch *search;
+@property (nonatomic, retain) SM3DAR_PointOfInterest *selectedPOI;
 
 @end
 

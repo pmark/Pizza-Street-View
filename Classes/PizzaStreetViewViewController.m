@@ -15,7 +15,7 @@
 #define STREET_VIEW_URL_FORMAT @"http://maps.google.com/cbk?output=thumbnail&ll=%f,%f"
 
 @implementation PizzaStreetViewViewController
-@synthesize search;
+@synthesize search, selectedPOI;
 
 #pragma mark -
 - (void)viewDidLoad {
@@ -49,20 +49,83 @@
 }
 
 
--(void)didChangeFocusToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
+- (void) didChangeFocusToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
 }
 
--(void)didChangeSelectionToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
-  NSLog(@"calling");
-  if ([newPOI isKindOfClass:[SM3DAR_PointOfInterest class]]) {
-    SM3DAR_PointOfInterest *poi = (SM3DAR_PointOfInterest*)newPOI;
-    NSLog(@"props: %@", poi.properties);
-    NSString *urlBiz = [poi.properties objectForKey:@"BusinessClickUrl"];
-    NSString *urlYahoo = [poi.properties objectForKey:@"ClickUrl"];
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://1-805-689-5074"]];
+- (void) phoneAction {
+  NSString *phone = [selectedPOI.properties objectForKey:@"Phone"];
+  NSMutableString *str = [NSMutableString string];
+  
+  for (int i=0; i < [phone length]; i++) {
+    if (isdigit([phone characterAtIndex:i])) {
+      [str appendFormat:@"%c", [phone characterAtIndex:i]];
+    }
+  }
+  
+  phone = [NSString stringWithFormat:@"tel://1-%@", str];
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+}
+
+- (void) webAction {
+//  NSString *urlBiz = [selectedPOI.properties objectForKey:@"BusinessClickUrl"];
+  NSString *urlYahoo = [selectedPOI.properties objectForKey:@"ClickUrl"];
+  
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlYahoo]];
+}
+
+- (void) mapAction {
+  CLLocation *loc = [SM3DAR_Controller sharedSM3DAR_Controller].currentLocation;
+  NSString *address = [selectedPOI.properties objectForKey:@"Address"];
+  NSString* url = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%@",
+                   loc.coordinate.latitude, loc.coordinate.longitude,
+                   [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+  
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
+
+- (void) showActionSheet {
+  NSString *title = [NSString stringWithFormat:@"%@\n%@\n%@",
+                     [selectedPOI.properties objectForKey:@"title"], 
+                     [selectedPOI.properties objectForKey:@"Address"], 
+                     [selectedPOI.properties objectForKey:@"Phone"]];
+
+  UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                     initWithTitle:title
+                     delegate:self
+                     cancelButtonTitle:@"Cancel"
+                     destructiveButtonTitle:nil
+                     otherButtonTitles:@"Phone", @"Web", @"Map", nil];
+  
+	actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+	[actionSheet showInView:self.view];
+	[actionSheet release];
+}
+
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	//NSInteger cancelIndex = actionSheet.cancelButtonIndex;
+
+  switch (buttonIndex) {
+    case 0:
+      // phone
+      [self phoneAction];
+      break;
+    case 1:
+      [self webAction];
+      break;
+    case 2:
+      [self mapAction];
+      break;
+    default:
+      break;
   }
 }
 
+- (void) didChangeSelectionToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
+  if ([newPOI isKindOfClass:[SM3DAR_PointOfInterest class]]) {
+    self.selectedPOI = (SM3DAR_PointOfInterest*)newPOI;
+    [self showActionSheet];
+  }
+}
 
  
 #pragma mark -
@@ -81,6 +144,7 @@
 
 - (void)dealloc {
   [search release];
+  [selectedPOI release];
   [super dealloc];
 }
 
