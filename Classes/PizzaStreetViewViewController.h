@@ -11,10 +11,11 @@
 #import "LocalSearch.h"
 #import "AudioToolbox/AudioServices.h"
 
-@interface PizzaStreetViewViewController : UIViewController <SM3DAR_Delegate, UIActionSheetDelegate> {
+@interface PizzaStreetViewViewController : UIViewController <SM3DAR_Delegate, UIActionSheetDelegate, CLLocationManagerDelegate> {
   LocalSearch *search;
   SM3DAR_PointOfInterest *selectedPOI;
 	SystemSoundID focusSound;
+  NSDate *lastLocationUpdate;
 }
 
 @property (nonatomic, retain) LocalSearch *search;

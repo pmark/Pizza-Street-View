@@ -43,6 +43,7 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 @end
 
 @interface SM3DAR_Controller : UIViewController <UIAccelerometerDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
+/*
 	BOOL mapIsVisible;	
 	BOOL originInitialized;
 	MKMapView *map;	
@@ -55,6 +56,7 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 	Class markerViewClass;
 	CGFloat nearClipMeters;
 	CGFloat farClipMeters;
+*/
 }
 
 @property (assign) BOOL mapIsVisible;
@@ -70,6 +72,7 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 @property (nonatomic, retain) SM3DAR_FocusView *focusView;
 @property (nonatomic, assign) CGFloat nearClipMeters;
 @property (nonatomic, assign) CGFloat farClipMeters;
+@property (assign) NSTimeInterval locationUpdateInterval;
 
 + (SM3DAR_Controller*)sharedSM3DAR_Controller;
 

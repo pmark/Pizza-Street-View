@@ -11,8 +11,10 @@
 #import "AnimatedSphereView.h"
 #import "LocalSearch.h"
 
-
 #define STREET_VIEW_URL_FORMAT @"http://maps.google.com/cbk?output=thumbnail&ll=%f,%f"
+#define SPHERE_TAG 32423
+#define MIN_ACCURACY_METERS 30
+#define LOCATION_UPDATE_MIN_DISTANCE_DELTA_METERS 40.0
 
 @implementation PizzaStreetViewViewController
 @synthesize search, selectedPOI;
@@ -42,6 +44,7 @@
                          loc.coordinate.latitude, loc.coordinate.longitude];
   NSURL *url = [NSURL URLWithString:urlString];  
   SphereView *sv = [[[SphereView alloc] initWithTextureURL:url] autorelease];
+  sv.tag = SPHERE_TAG;
 
   // create a fixture point 
   SM3DAR_Fixture *fixture = [[SM3DAR_Fixture alloc] init];  
@@ -137,6 +140,31 @@
 	AudioServicesPlaySystemSound(focusSound);
 } 
 
+#pragma mark -
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+
+  if (oldLocation) {
+    CLLocationDistance distanceDelta = [newLocation getDistanceFrom:oldLocation];
+    if (distanceDelta < LOCATION_UPDATE_MIN_DISTANCE_DELTA_METERS)
+      return;
+  }
+
+  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedSM3DAR_Controller];
+  SphereView *sv = (SphereView*)[sm3dar.view viewWithTag:SPHERE_TAG];
+
+  // Ignore inaccurate updates unless this is the first time
+  if (sv.textureImage != nil && newLocation.horizontalAccuracy > MIN_ACCURACY_METERS)
+    return;
+    
+  NSLog(@"[PIZZASTREET] location updated");
+  CLLocation *loc = [sm3dar currentLocation];
+
+  NSString *urlString = [NSString stringWithFormat:STREET_VIEW_URL_FORMAT, 
+                         loc.coordinate.latitude, loc.coordinate.longitude];
+  NSURL *url = [NSURL URLWithString:urlString];  
+
+  [sv fetchTextureImage:url];
+}
  
 #pragma mark -
 - (void) didReceiveMemoryWarning {

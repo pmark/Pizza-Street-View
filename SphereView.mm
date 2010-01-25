@@ -75,11 +75,7 @@
   }
 
   if (self.textureURL) {
-    self.artworkFetcher = [[[AsyncArtworkFetcher alloc] init] autorelease];
-    artworkFetcher.url = self.textureURL;
-    artworkFetcher.delegate = self;
-    NSLog(@"[SV] fetching image at %@", self.textureURL);
-    [artworkFetcher fetch];    
+    [self fetchTextureImage:self.textureURL];
   }
 }
 
@@ -109,7 +105,10 @@
 }
 
 - (void) updateTexture {
-  [texture replaceTextureWithImage:self.textureImage.CGImage];
+  if (self.textureImage) {
+    NSLog(@"[PIZZASTREET] updating texture with %@", self.textureImage);
+    [texture replaceTextureWithImage:self.textureImage.CGImage];
+  }
 }
 
 - (void)artworkFetcher:(AsyncArtworkFetcher *)fetcher didFinish:(UIImage *)artworkImage {  
@@ -117,9 +116,9 @@
 }
 
 - (void) updateImage:(UIImage*)img {
-  NSLog(@"[SV] resizing image from original: %f, %f", img.size.width, img.size.height);
+  NSLog(@"[PIZZASTREET] resizing image from original: %f, %f", img.size.width, img.size.height);
   img = [self resizeImage:img];
-  //NSLog(@"[SV] DONE: %f, %f", img.size.width, img.size.height);
+  //NSLog(@"[PIZZASTREET] DONE: %f, %f", img.size.width, img.size.height);
   self.textureImage = img;
   [self updateTexture];
 }
@@ -136,6 +135,15 @@
 	return result;	
 }
 
+- (void) fetchTextureImage:(NSURL*)url {
+  if (self.artworkFetcher == nil) {
+    self.artworkFetcher = [[[AsyncArtworkFetcher alloc] init] autorelease];
+    artworkFetcher.delegate = self;
+  }
 
+  artworkFetcher.url = url;
+  [artworkFetcher fetch];    
+  NSLog(@"[PIZZASTREET] fetching image at %@", url);
+}  
 
 @end

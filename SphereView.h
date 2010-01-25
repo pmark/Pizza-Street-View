@@ -32,5 +32,5 @@
 - (void) updateTexture;
 - (void) updateImage:(UIImage*)newImage;
 - (UIImage*) resizeImage:(UIImage*)originalImage;
-
+- (void) fetchTextureImage:(NSURL*)url;
 @end
