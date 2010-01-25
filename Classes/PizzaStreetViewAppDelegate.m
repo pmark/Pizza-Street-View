@@ -3,7 +3,7 @@
 //  PizzaStreetView
 //
 //  Created by P. Mark Anderson on 1/24/10.
-//  Copyright Bordertown Labs, LLC 2010. All rights reserved.
+//  Copyright Spot Metrix 2010. All rights reserved.
 //
 
 #import "PizzaStreetViewAppDelegate.h"

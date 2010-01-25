@@ -3,7 +3,7 @@
 //  PizzaStreetView
 //
 //  Created by P. Mark Anderson on 1/24/10.
-//  Copyright Bordertown Labs, LLC 2010. All rights reserved.
+//  Copyright Spot Metrix 2010. All rights reserved.
 //
 
 #import "PizzaStreetViewViewController.h"
@@ -35,16 +35,16 @@
   search.sm3dar = sm3dar;
   [search execute:@"pizza"];
 
-  SM3DAR_Fixture *fixture = [[SM3DAR_Fixture alloc] init];  
+  // create a sphere view with a textured mapped panoramic street view image
   CLLocation *loc = [sm3dar currentLocation];
   NSString *urlString = [NSString stringWithFormat:STREET_VIEW_URL_FORMAT, 
                          loc.coordinate.latitude, loc.coordinate.longitude];
-  NSURL *url = [NSURL URLWithString:urlString];
-  
+  NSURL *url = [NSURL URLWithString:urlString];  
   SphereView *sv = [[[SphereView alloc] initWithTextureURL:url] autorelease];
-//  SphereView *sv = [[[SphereView alloc] initWithTextureNamed:@"texture.png"] autorelease];
+
+  // create a fixture point 
+  SM3DAR_Fixture *fixture = [[SM3DAR_Fixture alloc] init];  
   fixture.view = sv;
-  
   [sm3dar addPointOfInterest:fixture];
 }
 
@@ -102,11 +102,8 @@
 }
 
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-	//NSInteger cancelIndex = actionSheet.cancelButtonIndex;
-
   switch (buttonIndex) {
     case 0:
-      // phone
       [self phoneAction];
       break;
     case 1:

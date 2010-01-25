@@ -85,7 +85,7 @@
 
 - (void) drawInGLContext {
   
-  glScalef (200, 200, 200);
+  glScalef (500, 500, 500);
   glRotatef (180, 1, 0, 0);
 
 // Use this rotation to correct the sphere.obj
@@ -94,11 +94,13 @@
 //  [self updateTexture];
 
   glDepthMask(0);
-  if (textureImage == nil)
+  if (textureImage == nil) {
     [self.geometry displayWireframe];
-//  [self.geometry displayFilledWithTexture:self.texture];
-  else
+  } else {
+    // TODO: figure out why this geometry disappears sometimes after a few seconds
     [Geometry displaySphereWithTexture:self.texture];
+    //[self.geometry displayFilledWithTexture:self.texture];
+  }
 
   glDepthMask(1);
 }

@@ -3,7 +3,7 @@
 //  SM3DARViewer
 //
 //  Created by P. Mark Anderson on 12/18/09.
-//  Copyright 2009 Bordertown Labs, LLC. All rights reserved.
+//  Copyright 2009 Spot Metrix. All rights reserved.
 //
 
 #import "LocalSearch.h"
