@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PizzaStreetViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PizzaStreetViewAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* PizzaStreetViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PizzaStreetViewViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* PizzaStreetViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PizzaStreetViewViewController.m */; };
+		4D5C94E4110D33C300B19D9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C94E3110D33C300B19D9D /* CoreLocation.framework */; };
+		4D5C94E6110D33C300B19D9D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C94E5110D33C300B19D9D /* MapKit.framework */; };
+		4D5C94E8110D33C300B19D9D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C94E7110D33C300B19D9D /* OpenGLES.framework */; };
+		4D5C94EA110D33C300B19D9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C94E9110D33C300B19D9D /* QuartzCore.framework */; };
+		4D5C9537110D343800B19D9D /* BSJSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C952E110D343800B19D9D /* BSJSONEncoder.m */; };
+		4D5C9538110D343800B19D9D /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9530110D343800B19D9D /* NSArray+BSJSONAdditions.m */; };
+		4D5C9539110D343800B19D9D /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9532110D343800B19D9D /* NSDictionary+BSJSONAdditions.m */; };
+		4D5C953A110D343800B19D9D /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9534110D343800B19D9D /* NSScanner+BSJSONAdditions.m */; };
+		4D5C953B110D343800B19D9D /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9536110D343800B19D9D /* NSString+BSJSONAdditions.m */; };
+		4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C953E110D346800B19D9D /* SM3DARLibary.a */; };
+		4D5C9545110D347F00B19D9D /* AnimatedSphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */; };
+		4D5C9546110D347F00B19D9D /* SphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9544110D347F00B19D9D /* SphereView.mm */; };
+		4D5C954D110D349800B19D9D /* AsyncArtworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */; };
+		4D5C954E110D349800B19D9D /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C954A110D349800B19D9D /* LocalSearch.m */; };
+		4D5C954F110D349800B19D9D /* UIApplication_TLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */; };
+		4D5C9553110D370900B19D9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9551110D370900B19D9D /* Default.png */; };
+		4D5C9554110D370900B19D9D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9552110D370900B19D9D /* Icon.png */; };
+		4D5C9573110D371600B19D9D /* street1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9557110D371600B19D9D /* street1024.jpg */; };
+		4D5C9574110D371600B19D9D /* street.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9558110D371600B19D9D /* street.jpg */; };
+		4D5C9575110D371600B19D9D /* street2048.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9559110D371600B19D9D /* street2048.jpg */; };
+		4D5C9576110D371600B19D9D /* audacity-hdh-week-41.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955A110D371600B19D9D /* audacity-hdh-week-41.png */; };
+		4D5C9577110D371600B19D9D /* ingiltere-bayragi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955B110D371600B19D9D /* ingiltere-bayragi.png */; };
+		4D5C9578110D371600B19D9D /* spheremap_norm.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955C110D371600B19D9D /* spheremap_norm.png */; };
+		4D5C9579110D371600B19D9D /* timezone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955D110D371600B19D9D /* timezone.png */; };
+		4D5C957A110D371600B19D9D /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955E110D371600B19D9D /* world.png */; };
+		4D5C957B110D371600B19D9D /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C955F110D371600B19D9D /* texture.png */; };
+		4D5C957C110D371600B19D9D /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9560110D371600B19D9D /* sphere.obj */; };
+		4D5C957D110D371600B19D9D /* markers_lakeoswego.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9561110D371600B19D9D /* markers_lakeoswego.json */; };
+		4D5C957E110D371600B19D9D /* markers_greendragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9562110D371600B19D9D /* markers_greendragon.json */; };
+		4D5C957F110D371600B19D9D /* markers_opensourcery.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9563110D371600B19D9D /* markers_opensourcery.json */; };
+		4D5C9580110D371600B19D9D /* markers.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9564110D371600B19D9D /* markers.json */; };
+		4D5C9581110D371600B19D9D /* SM3DAR_keys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9565110D371600B19D9D /* SM3DAR_keys.txt */; };
+		4D5C9582110D371600B19D9D /* 3dar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9566110D371600B19D9D /* 3dar.plist */; };
+		4D5C9583110D371600B19D9D /* 3dar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9567110D371600B19D9D /* 3dar_logo.png */; };
+		4D5C9584110D371600B19D9D /* 3dar_marker_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9568110D371600B19D9D /* 3dar_marker_icon1.png */; };
+		4D5C9585110D371600B19D9D /* 3dar_marker_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9569110D371600B19D9D /* 3dar_marker_icon2.png */; };
+		4D5C9586110D371600B19D9D /* 3dar_marker_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956A110D371600B19D9D /* 3dar_marker_icon3.png */; };
+		4D5C9587110D371600B19D9D /* 3dar_marker_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956B110D371600B19D9D /* 3dar_marker_icon4.png */; };
+		4D5C9588110D371600B19D9D /* 3dar_marker_icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956C110D371600B19D9D /* 3dar_marker_icon5.png */; };
+		4D5C9589110D371600B19D9D /* 3dar_marker_icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956D110D371600B19D9D /* 3dar_marker_icon6.png */; };
+		4D5C958A110D371600B19D9D /* bubble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956E110D371600B19D9D /* bubble1.png */; };
+		4D5C958B110D371600B19D9D /* compass_rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956F110D371600B19D9D /* compass_rose.png */; };
+		4D5C958C110D371600B19D9D /* focus1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9570110D371600B19D9D /* focus1.aif */; };
+		4D5C958D110D371600B19D9D /* spot_metrix_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PizzaStreetViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaStreetViewAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PizzaStreetViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaStreetViewAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* PizzaStreet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaStreet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* PizzaStreetViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaStreetViewViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* PizzaStreetViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaStreetViewViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* PizzaStreetViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaStreetViewViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PizzaStreetView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaStreetView_Prefix.pch; sourceTree = "<group>"; };
+		4D5C94E3110D33C300B19D9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4D5C94E5110D33C300B19D9D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D5C94E7110D33C300B19D9D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4D5C94E9110D33C300B19D9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4D5C952D110D343800B19D9D /* BSJSONEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONEncoder.h; sourceTree = "<group>"; };
+		4D5C952E110D343800B19D9D /* BSJSONEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJSONEncoder.m; sourceTree = "<group>"; };
+		4D5C952F110D343800B19D9D /* NSArray+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BSJSONAdditions.h"; sourceTree = "<group>"; };
+		4D5C9530110D343800B19D9D /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		4D5C9531110D343800B19D9D /* NSDictionary+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BSJSONAdditions.h"; sourceTree = "<group>"; };
+		4D5C9532110D343800B19D9D /* NSDictionary+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		4D5C9533110D343800B19D9D /* NSScanner+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+BSJSONAdditions.h"; sourceTree = "<group>"; };
+		4D5C9534110D343800B19D9D /* NSScanner+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		4D5C9535110D343800B19D9D /* NSString+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSJSONAdditions.h"; sourceTree = "<group>"; };
+		4D5C9536110D343800B19D9D /* NSString+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		4D5C953E110D346800B19D9D /* SM3DARLibary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SM3DARLibary.a; path = "../../SM3DAR/SM3DARLibary/build/Debug-iphoneos/SM3DARLibary.a"; sourceTree = SOURCE_ROOT; };
+		4D5C9541110D347F00B19D9D /* AnimatedSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSphereView.h; sourceTree = "<group>"; };
+		4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimatedSphereView.mm; sourceTree = "<group>"; };
+		4D5C9543110D347F00B19D9D /* SphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereView.h; sourceTree = "<group>"; };
+		4D5C9544110D347F00B19D9D /* SphereView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SphereView.mm; sourceTree = "<group>"; };
+		4D5C9547110D349800B19D9D /* AsyncArtworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncArtworkFetcher.h; path = ../Sphere/AsyncArtworkFetcher.h; sourceTree = SOURCE_ROOT; };
+		4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncArtworkFetcher.m; path = ../Sphere/AsyncArtworkFetcher.m; sourceTree = SOURCE_ROOT; };
+		4D5C9549110D349800B19D9D /* LocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalSearch.h; path = ../Sphere/LocalSearch.h; sourceTree = SOURCE_ROOT; };
+		4D5C954A110D349800B19D9D /* LocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalSearch.m; path = ../Sphere/LocalSearch.m; sourceTree = SOURCE_ROOT; };
+		4D5C954B110D349800B19D9D /* UIApplication_TLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIApplication_TLCommon.h; path = ../Sphere/UIApplication_TLCommon.h; sourceTree = SOURCE_ROOT; };
+		4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIApplication_TLCommon.m; path = ../Sphere/UIApplication_TLCommon.m; sourceTree = SOURCE_ROOT; };
+		4D5C9551110D370900B19D9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4D5C9552110D370900B19D9D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		4D5C9557110D371600B19D9D /* street1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = street1024.jpg; sourceTree = "<group>"; };
+		4D5C9558110D371600B19D9D /* street.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = street.jpg; sourceTree = "<group>"; };
+		4D5C9559110D371600B19D9D /* street2048.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = street2048.jpg; sourceTree = "<group>"; };
+		4D5C955A110D371600B19D9D /* audacity-hdh-week-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audacity-hdh-week-41.png"; sourceTree = "<group>"; };
+		4D5C955B110D371600B19D9D /* ingiltere-bayragi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ingiltere-bayragi.png"; sourceTree = "<group>"; };
+		4D5C955C110D371600B19D9D /* spheremap_norm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spheremap_norm.png; sourceTree = "<group>"; };
+		4D5C955D110D371600B19D9D /* timezone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timezone.png; sourceTree = "<group>"; };
+		4D5C955E110D371600B19D9D /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		4D5C955F110D371600B19D9D /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		4D5C9560110D371600B19D9D /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
+		4D5C9561110D371600B19D9D /* markers_lakeoswego.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markers_lakeoswego.json; sourceTree = "<group>"; };
+		4D5C9562110D371600B19D9D /* markers_greendragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markers_greendragon.json; sourceTree = "<group>"; };
+		4D5C9563110D371600B19D9D /* markers_opensourcery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markers_opensourcery.json; sourceTree = "<group>"; };
+		4D5C9564110D371600B19D9D /* markers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = markers.json; sourceTree = "<group>"; };
+		4D5C9565110D371600B19D9D /* SM3DAR_keys.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SM3DAR_keys.txt; sourceTree = "<group>"; };
+		4D5C9566110D371600B19D9D /* 3dar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3dar.plist; sourceTree = "<group>"; };
+		4D5C9567110D371600B19D9D /* 3dar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_logo.png; sourceTree = "<group>"; };
+		4D5C9568110D371600B19D9D /* 3dar_marker_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon1.png; sourceTree = "<group>"; };
+		4D5C9569110D371600B19D9D /* 3dar_marker_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon2.png; sourceTree = "<group>"; };
+		4D5C956A110D371600B19D9D /* 3dar_marker_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon3.png; sourceTree = "<group>"; };
+		4D5C956B110D371600B19D9D /* 3dar_marker_icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon4.png; sourceTree = "<group>"; };
+		4D5C956C110D371600B19D9D /* 3dar_marker_icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon5.png; sourceTree = "<group>"; };
+		4D5C956D110D371600B19D9D /* 3dar_marker_icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon6.png; sourceTree = "<group>"; };
+		4D5C956E110D371600B19D9D /* bubble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble1.png; sourceTree = "<group>"; };
+		4D5C956F110D371600B19D9D /* compass_rose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_rose.png; sourceTree = "<group>"; };
+		4D5C9570110D371600B19D9D /* focus1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = focus1.aif; sourceTree = "<group>"; };
+		4D5C9571110D371600B19D9D /* SM3DAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM3DAR.h; sourceTree = "<group>"; };
+		4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spot_metrix_logo.jpg; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PizzaStreetView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PizzaStreetView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				4D5C94E4110D33C300B19D9D /* CoreLocation.framework in Frameworks */,
+				4D5C94E6110D33C300B19D9D /* MapKit.framework in Frameworks */,
+				4D5C94E8110D33C300B19D9D /* OpenGLES.framework in Frameworks */,
+				4D5C94EA110D33C300B19D9D /* QuartzCore.framework in Frameworks */,
+				4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* PizzaStreetViewAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PizzaStreetViewAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* PizzaStreetViewViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* PizzaStreetViewViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* PizzaStreet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C953E110D346800B19D9D /* SM3DARLibary.a */,
+				4D5C9540110D347F00B19D9D /* Views */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				4D5C9555110D371600B19D9D /* SM3DAR_resources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C952C110D343800B19D9D /* BSJSONAdditions */,
+				4D5C9547110D349800B19D9D /* AsyncArtworkFetcher.h */,
+				4D5C9548110D349800B19D9D /* AsyncArtworkFetcher.m */,
+				4D5C9549110D349800B19D9D /* LocalSearch.h */,
+				4D5C954A110D349800B19D9D /* LocalSearch.m */,
+				4D5C954B110D349800B19D9D /* UIApplication_TLCommon.h */,
+				4D5C954C110D349800B19D9D /* UIApplication_TLCommon.m */,
+				32CA4F630368D1EE00C91783 /* PizzaStreetView_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C9551110D370900B19D9D /* Default.png */,
+				4D5C9552110D370900B19D9D /* Icon.png */,
+				2899E5210DE3E06400AC0155 /* PizzaStreetViewViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* PizzaStreetView-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C94E3110D33C300B19D9D /* CoreLocation.framework */,
+				4D5C94E5110D33C300B19D9D /* MapKit.framework */,
+				4D5C94E7110D33C300B19D9D /* OpenGLES.framework */,
+				4D5C94E9110D33C300B19D9D /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D5C952C110D343800B19D9D /* BSJSONAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C952D110D343800B19D9D /* BSJSONEncoder.h */,
+				4D5C952E110D343800B19D9D /* BSJSONEncoder.m */,
+				4D5C952F110D343800B19D9D /* NSArray+BSJSONAdditions.h */,
+				4D5C9530110D343800B19D9D /* NSArray+BSJSONAdditions.m */,
+				4D5C9531110D343800B19D9D /* NSDictionary+BSJSONAdditions.h */,
+				4D5C9532110D343800B19D9D /* NSDictionary+BSJSONAdditions.m */,
+				4D5C9533110D343800B19D9D /* NSScanner+BSJSONAdditions.h */,
+				4D5C9534110D343800B19D9D /* NSScanner+BSJSONAdditions.m */,
+				4D5C9535110D343800B19D9D /* NSString+BSJSONAdditions.h */,
+				4D5C9536110D343800B19D9D /* NSString+BSJSONAdditions.m */,
+			);
+			path = BSJSONAdditions;
+			sourceTree = "<group>";
+		};
+		4D5C9540110D347F00B19D9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C9541110D347F00B19D9D /* AnimatedSphereView.h */,
+				4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */,
+				4D5C9543110D347F00B19D9D /* SphereView.h */,
+				4D5C9544110D347F00B19D9D /* SphereView.mm */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4D5C9555110D371600B19D9D /* SM3DAR_resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C9556110D371600B19D9D /* Data */,
+				4D5C9565110D371600B19D9D /* SM3DAR_keys.txt */,
+				4D5C9566110D371600B19D9D /* 3dar.plist */,
+				4D5C9567110D371600B19D9D /* 3dar_logo.png */,
+				4D5C9568110D371600B19D9D /* 3dar_marker_icon1.png */,
+				4D5C9569110D371600B19D9D /* 3dar_marker_icon2.png */,
+				4D5C956A110D371600B19D9D /* 3dar_marker_icon3.png */,
+				4D5C956B110D371600B19D9D /* 3dar_marker_icon4.png */,
+				4D5C956C110D371600B19D9D /* 3dar_marker_icon5.png */,
+				4D5C956D110D371600B19D9D /* 3dar_marker_icon6.png */,
+				4D5C956E110D371600B19D9D /* bubble1.png */,
+				4D5C956F110D371600B19D9D /* compass_rose.png */,
+				4D5C9570110D371600B19D9D /* focus1.aif */,
+				4D5C9571110D371600B19D9D /* SM3DAR.h */,
+				4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */,
+			);
+			path = SM3DAR_resources;
+			sourceTree = "<group>";
+		};
+		4D5C9556110D371600B19D9D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C9557110D371600B19D9D /* street1024.jpg */,
+				4D5C9558110D371600B19D9D /* street.jpg */,
+				4D5C9559110D371600B19D9D /* street2048.jpg */,
+				4D5C955A110D371600B19D9D /* audacity-hdh-week-41.png */,
+				4D5C955B110D371600B19D9D /* ingiltere-bayragi.png */,
+				4D5C955C110D371600B19D9D /* spheremap_norm.png */,
+				4D5C955D110D371600B19D9D /* timezone.png */,
+				4D5C955E110D371600B19D9D /* world.png */,
+				4D5C955F110D371600B19D9D /* texture.png */,
+				4D5C9560110D371600B19D9D /* sphere.obj */,
+				4D5C9561110D371600B19D9D /* markers_lakeoswego.json */,
+				4D5C9562110D371600B19D9D /* markers_greendragon.json */,
+				4D5C9563110D371600B19D9D /* markers_opensourcery.json */,
+				4D5C9564110D371600B19D9D /* markers.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* PizzaStreetView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PizzaStreetView" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaStreetView;
+			productName = PizzaStreetView;
+			productReference = 1D6058910D05DD3D006BFB54 /* PizzaStreet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PizzaStreetView" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* PizzaStreetView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* PizzaStreetViewViewController.xib in Resources */,
+				4D5C9553110D370900B19D9D /* Default.png in Resources */,
+				4D5C9554110D370900B19D9D /* Icon.png in Resources */,
+				4D5C9573110D371600B19D9D /* street1024.jpg in Resources */,
+				4D5C9574110D371600B19D9D /* street.jpg in Resources */,
+				4D5C9575110D371600B19D9D /* street2048.jpg in Resources */,
+				4D5C9576110D371600B19D9D /* audacity-hdh-week-41.png in Resources */,
+				4D5C9577110D371600B19D9D /* ingiltere-bayragi.png in Resources */,
+				4D5C9578110D371600B19D9D /* spheremap_norm.png in Resources */,
+				4D5C9579110D371600B19D9D /* timezone.png in Resources */,
+				4D5C957A110D371600B19D9D /* world.png in Resources */,
+				4D5C957B110D371600B19D9D /* texture.png in Resources */,
+				4D5C957C110D371600B19D9D /* sphere.obj in Resources */,
+				4D5C957D110D371600B19D9D /* markers_lakeoswego.json in Resources */,
+				4D5C957E110D371600B19D9D /* markers_greendragon.json in Resources */,
+				4D5C957F110D371600B19D9D /* markers_opensourcery.json in Resources */,
+				4D5C9580110D371600B19D9D /* markers.json in Resources */,
+				4D5C9581110D371600B19D9D /* SM3DAR_keys.txt in Resources */,
+				4D5C9582110D371600B19D9D /* 3dar.plist in Resources */,
+				4D5C9583110D371600B19D9D /* 3dar_logo.png in Resources */,
+				4D5C9584110D371600B19D9D /* 3dar_marker_icon1.png in Resources */,
+				4D5C9585110D371600B19D9D /* 3dar_marker_icon2.png in Resources */,
+				4D5C9586110D371600B19D9D /* 3dar_marker_icon3.png in Resources */,
+				4D5C9587110D371600B19D9D /* 3dar_marker_icon4.png in Resources */,
+				4D5C9588110D371600B19D9D /* 3dar_marker_icon5.png in Resources */,
+				4D5C9589110D371600B19D9D /* 3dar_marker_icon6.png in Resources */,
+				4D5C958A110D371600B19D9D /* bubble1.png in Resources */,
+				4D5C958B110D371600B19D9D /* compass_rose.png in Resources */,
+				4D5C958C110D371600B19D9D /* focus1.aif in Resources */,
+				4D5C958D110D371600B19D9D /* spot_metrix_logo.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PizzaStreetViewAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* PizzaStreetViewViewController.m in Sources */,
+				4D5C9537110D343800B19D9D /* BSJSONEncoder.m in Sources */,
+				4D5C9538110D343800B19D9D /* NSArray+BSJSONAdditions.m in Sources */,
+				4D5C9539110D343800B19D9D /* NSDictionary+BSJSONAdditions.m in Sources */,
+				4D5C953A110D343800B19D9D /* NSScanner+BSJSONAdditions.m in Sources */,
+				4D5C953B110D343800B19D9D /* NSString+BSJSONAdditions.m in Sources */,
+				4D5C9545110D347F00B19D9D /* AnimatedSphereView.mm in Sources */,
+				4D5C9546110D347F00B19D9D /* SphereView.mm in Sources */,
+				4D5C954D110D349800B19D9D /* AsyncArtworkFetcher.m in Sources */,
+				4D5C954E110D349800B19D9D /* LocalSearch.m in Sources */,
+				4D5C954F110D349800B19D9D /* UIApplication_TLCommon.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PizzaStreetView_Prefix.pch;
+				INFOPLIST_FILE = "PizzaStreetView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../SM3DAR/SM3DARLibary/build/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = PizzaStreet;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "96A8CCE4-6EEB-4A79-B9AF-5F468C6FCBA9";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PizzaStreetView_Prefix.pch;
+				INFOPLIST_FILE = "PizzaStreetView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../SM3DAR/SM3DARLibary/build/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = PizzaStreet;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "96A8CCE4-6EEB-4A79-B9AF-5F468C6FCBA9";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = PizzaStreet;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEE0AFC7-1F9E-4E1C-B451-1F6A119CDB59";
+				SDKROOT = iphoneos3.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = PizzaStreet;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEE0AFC7-1F9E-4E1C-B451-1F6A119CDB59";
+				SDKROOT = iphoneos3.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PizzaStreetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PizzaStreetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
