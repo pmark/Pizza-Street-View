@@ -48,6 +48,22 @@
   [sm3dar addPointOfInterest:fixture];
 }
 
+
+-(void)didChangeFocusToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
+}
+
+-(void)didChangeSelectionToPOI:(SM3DAR_Point*)newPOI fromPOI:(SM3DAR_Point*)oldPOI {
+  NSLog(@"calling");
+  if ([newPOI isKindOfClass:[SM3DAR_PointOfInterest class]]) {
+    SM3DAR_PointOfInterest *poi = (SM3DAR_PointOfInterest*)newPOI;
+    NSLog(@"props: %@", poi.properties);
+    NSString *urlBiz = [poi.properties objectForKey:@"BusinessClickUrl"];
+    NSString *urlYahoo = [poi.properties objectForKey:@"ClickUrl"];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://1-805-689-5074"]];
+  }
+}
+
+
  
 #pragma mark -
 - (void)didReceiveMemoryWarning {

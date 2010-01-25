@@ -50,21 +50,31 @@
 
 // thank you http://json.parser.online.fr/
 - (NSArray*)parseYahooMapSearchResults:(NSString*)json {
-	NSDictionary *responseDict = [NSDictionary dictionaryWithJSONString:json];	
-	NSDictionary *container = [responseDict objectForKey:@"ResultSet"];	
+	NSDictionary *properties = [NSDictionary dictionaryWithJSONString:json];
+	NSDictionary *container = [properties objectForKey:@"ResultSet"];	
 	NSArray *responseSet = [container objectForKey:@"Result"];
-	NSDictionary *marker, *minMarker;
+	NSDictionary *minMarker;
 	NSMutableArray *markers = [NSMutableArray arrayWithCapacity:[responseSet count]];
-
-	for (marker in responseSet) {
+  NSMutableDictionary *merged;
+  NSString *star = @"★"; // @"\U2605";
+  
+	for (NSDictionary *marker in responseSet) {
+    NSString *rating = [[marker objectForKey:@"Rating"] objectForKey:@"AverageRating"];
+    CGFloat stars = [rating floatValue];
+    rating = [@"" stringByPaddingToLength:stars withString:star startingAtIndex:0];
+    //NSLog(@"stars: %f, rating: %@", stars, rating);
+    
 		minMarker = [NSDictionary dictionaryWithObjectsAndKeys:
 							[marker objectForKey:@"Title"], @"title",
-							[marker objectForKey:@"Address"], @"subtitle",
+							rating, @"subtitle",
 							[marker objectForKey:@"Latitude"], @"latitude",
 							[marker objectForKey:@"Longitude"], @"longitude",
 							self.query, @"search",
 							nil];
-		[markers addObject:minMarker];
+    
+    merged = [NSMutableDictionary dictionaryWithDictionary:marker];
+    [merged addEntriesFromDictionary:minMarker];
+		[markers addObject:merged];
 	}
 	
 	return markers;
@@ -80,9 +90,14 @@
 	NSArray *markers = [self parseYahooMapSearchResults:response];
 	
 	NSLog(@"Adding %i POIs", [markers count]);
+  NSMutableArray *points = [NSMutableArray arrayWithCapacity:[markers count]];
 	if (markers && [markers count] > 0) {
-    self.sm3dar.markerViewClass = nil;
-		[self.sm3dar loadMarkersFromJSON:[markers jsonStringValue]];
+    for (NSDictionary *row in markers) {
+      [points addObject:[self.sm3dar initPointOfInterest:row]];
+    }
+      
+    [self.sm3dar addPointsOfInterest:points];
+//		[self.sm3dar loadMarkersFromJSON:[markers jsonStringValue]];
 	}
 }
 

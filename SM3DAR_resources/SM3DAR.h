@@ -130,6 +130,7 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 @property (nonatomic, retain) UIView *view;
 @property (nonatomic, retain) SM3DAR_Controller *controller;
 @property (assign) BOOL hasFocus;
+@property (nonatomic, retain) NSDictionary *properties;
 
 - (UIView*)defaultView;
 - (id)initWithLocation:(CLLocation*)loc properties:(NSDictionary*)props;

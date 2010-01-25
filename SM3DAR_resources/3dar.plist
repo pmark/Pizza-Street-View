@@ -11,6 +11,6 @@
 	<key>3darShowStatusBar</key>
 	<false/>
 	<key>3darEnableMap</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
