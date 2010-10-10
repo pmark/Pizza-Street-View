@@ -24,13 +24,13 @@
   [super viewDidLoad];
   [self initSound];
   
-  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedSM3DAR_Controller];
+  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedController];
   sm3dar.delegate = self;
   [self.view addSubview:sm3dar.view];  
 }
 
 -(void)loadPointsOfInterest {
-  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedSM3DAR_Controller];
+  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedController];
 
   sm3dar.view.backgroundColor = [UIColor blackColor];
   
@@ -79,7 +79,7 @@
 }
 
 - (void) mapAction {
-  CLLocation *loc = [SM3DAR_Controller sharedSM3DAR_Controller].currentLocation;
+  CLLocation *loc = [SM3DAR_Controller sharedController].currentLocation;
   NSString *address = [selectedPOI.properties objectForKey:@"Address"];
   NSString* url = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=%f,%f&daddr=%@",
                    loc.coordinate.latitude, loc.coordinate.longitude,
@@ -143,13 +143,16 @@
 #pragma mark -
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 
+  [manager stopUpdatingLocation];
+    
+  /*
   if (oldLocation) {
     CLLocationDistance distanceDelta = [newLocation getDistanceFrom:oldLocation];
     if (distanceDelta < LOCATION_UPDATE_MIN_DISTANCE_DELTA_METERS)
       return;
   }
 
-  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedSM3DAR_Controller];
+  SM3DAR_Controller *sm3dar = [SM3DAR_Controller sharedController];
   SphereView *sv = (SphereView*)[sm3dar.view viewWithTag:SPHERE_TAG];
 
   // Ignore inaccurate updates unless this is the first time
@@ -164,6 +167,7 @@
   NSURL *url = [NSURL URLWithString:urlString];  
 
   [sv fetchTextureImage:url];
+  */
 }
  
 #pragma mark -

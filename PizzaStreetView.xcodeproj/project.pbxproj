@@ -24,7 +24,6 @@
 		4D5C9539110D343800B19D9D /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9532110D343800B19D9D /* NSDictionary+BSJSONAdditions.m */; };
 		4D5C953A110D343800B19D9D /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9534110D343800B19D9D /* NSScanner+BSJSONAdditions.m */; };
 		4D5C953B110D343800B19D9D /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9536110D343800B19D9D /* NSString+BSJSONAdditions.m */; };
-		4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C953E110D346800B19D9D /* SM3DARLibary.a */; };
 		4D5C9545110D347F00B19D9D /* AnimatedSphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */; };
 		4D5C9546110D347F00B19D9D /* SphereView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C9544110D347F00B19D9D /* SphereView.mm */; };
 		4D5C9553110D370900B19D9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9551110D370900B19D9D /* Default.png */; };
@@ -56,6 +55,7 @@
 		4D5C958B110D371600B19D9D /* compass_rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C956F110D371600B19D9D /* compass_rose.png */; };
 		4D5C958C110D371600B19D9D /* focus1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9570110D371600B19D9D /* focus1.aif */; };
 		4D5C958D110D371600B19D9D /* spot_metrix_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */; };
+		4DB6D37A1262693900B61C58 /* lib3DAR_2010July29.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB6D3791262693900B61C58 /* lib3DAR_2010July29.a */; };
 		4DD416F3110D6E9D00400C39 /* AsyncArtworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */; };
 		4DD416F4110D6E9D00400C39 /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F0110D6E9D00400C39 /* LocalSearch.m */; };
 		4DD416F5110D6E9D00400C39 /* UIApplication_TLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD416F2110D6E9D00400C39 /* UIApplication_TLCommon.m */; };
@@ -91,7 +91,6 @@
 		4D5C9534110D343800B19D9D /* NSScanner+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		4D5C9535110D343800B19D9D /* NSString+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		4D5C9536110D343800B19D9D /* NSString+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSJSONAdditions.m"; sourceTree = "<group>"; };
-		4D5C953E110D346800B19D9D /* SM3DARLibary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SM3DARLibary.a; path = "../../SM3DAR/SM3DARLibary/build/Debug-iphoneos/SM3DARLibary.a"; sourceTree = SOURCE_ROOT; };
 		4D5C9541110D347F00B19D9D /* AnimatedSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSphereView.h; sourceTree = "<group>"; };
 		4D5C9542110D347F00B19D9D /* AnimatedSphereView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnimatedSphereView.mm; sourceTree = "<group>"; };
 		4D5C9543110D347F00B19D9D /* SphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereView.h; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		4D5C9570110D371600B19D9D /* focus1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = focus1.aif; sourceTree = "<group>"; };
 		4D5C9571110D371600B19D9D /* SM3DAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM3DAR.h; sourceTree = "<group>"; };
 		4D5C9572110D371600B19D9D /* spot_metrix_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spot_metrix_logo.jpg; sourceTree = "<group>"; };
+		4DB6D3791262693900B61C58 /* lib3DAR_2010July29.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = lib3DAR_2010July29.a; sourceTree = "<group>"; };
 		4DD416ED110D6E9D00400C39 /* AsyncArtworkFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncArtworkFetcher.h; sourceTree = "<group>"; };
 		4DD416EE110D6E9D00400C39 /* AsyncArtworkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncArtworkFetcher.m; sourceTree = "<group>"; };
 		4DD416EF110D6E9D00400C39 /* LocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalSearch.h; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 				4D5C94E6110D33C300B19D9D /* MapKit.framework in Frameworks */,
 				4D5C94E8110D33C300B19D9D /* OpenGLES.framework in Frameworks */,
 				4D5C94EA110D33C300B19D9D /* QuartzCore.framework in Frameworks */,
-				4D5C953F110D346800B19D9D /* SM3DARLibary.a in Frameworks */,
 				4DD4195C110DB32800400C39 /* AudioToolbox.framework in Frameworks */,
+				4DB6D37A1262693900B61C58 /* lib3DAR_2010July29.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +180,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				4D5C953E110D346800B19D9D /* SM3DARLibary.a */,
 				4D5C9540110D347F00B19D9D /* Views */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -266,6 +265,7 @@
 		4D5C9555110D371600B19D9D /* SM3DAR_resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DB6D3791262693900B61C58 /* lib3DAR_2010July29.a */,
 				4D5C9556110D371600B19D9D /* Data */,
 				4D5C9565110D371600B19D9D /* SM3DAR_keys.txt */,
 				4D5C9566110D371600B19D9D /* 3dar.plist */,
@@ -335,7 +335,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PizzaStreetView" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,7 +423,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Anderson";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -425,7 +431,7 @@
 				INFOPLIST_FILE = "PizzaStreetView-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../SM3DAR/SM3DARLibary/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/SM3DAR_resources\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -433,7 +439,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = PizzaStreet;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "96A8CCE4-6EEB-4A79-B9AF-5F468C6FCBA9";
 			};
 			name = Debug;
 		};
@@ -448,7 +453,7 @@
 				INFOPLIST_FILE = "PizzaStreetView-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../SM3DAR/SM3DARLibary/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/SM3DAR_resources\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -464,12 +469,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				PREBINDING = NO;
 				PRODUCT_NAME = PizzaStreet;
-				SDKROOT = iphoneos3.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -477,12 +485,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				PREBINDING = NO;
 				PRODUCT_NAME = PizzaStreet;
-				SDKROOT = iphoneos3.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};

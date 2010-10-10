@@ -74,7 +74,7 @@ typedef NSObject<SM3DAR_PointProtocol> SM3DAR_Point;
 @property (nonatomic, assign) CGFloat farClipMeters;
 @property (assign) NSTimeInterval locationUpdateInterval;
 
-+ (SM3DAR_Controller*)sharedSM3DAR_Controller;
++ (SM3DAR_Controller*)sharedController;
 
 // points of interest
 - (void)addPointOfInterest:(SM3DAR_Point*)point;
